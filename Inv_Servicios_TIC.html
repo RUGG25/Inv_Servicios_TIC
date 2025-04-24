@@ -15,26 +15,23 @@
 </head>
 
 <body class="bg-gray-100 font-sans">
-    <div class="container mx-auto p-6">
-        <!-- Encabezado -->
-        <header class="text-center mb-6">
-            <h1 class="text-3xl font-bold text-gray-800">Inventario de Infraestructura DGTIC</h1>
-        </header>
+    <div class="container mx-auto p-6 relative">
+        <img src="https://github.com/RUGG25/Inv_Servicios_TIC/blob/main/logo_DGTIC.jpg?raw=true" alt="Logo DGTIC" class="absolute top-0 right-0 w-32 m-4">
 
         <!-- Módulo de Sitios -->
-        <form method="POST" action="https://script.google.com/macros/s/AKfycbxKF8PmyQVWMNb3KpowDhV1G_lfrWWZ7vGGQqmNrjLYcr5xRc2vm1hVxb0fVtT6rg-vUQ/exec?sheet=Datos_sitios" onsubmit="mostrarMensaje()">
+        <form method="POST" action="https://script.google.com/macros/s/AKfycbxKF8PmyQVWMNb3KpowDhV1G_lfrWWZ7vGGQqmNrjLYcr5xRc2vm1hVxb0fVtT6rg-vUQ/exec?sheet=Datos_Sitios" onsubmit="mostrarMensaje()">
             <fieldset class="border border-gray-300 rounded-xl p-4 mb-6">
                 <legend class="font-semibold text-lg mb-2 flex items-center text-gray-700">
-                    <i class="fas fa-map-marker-alt mr-2"></i> Módulo de Sitios
+                    <i class="fas fa-building mr-2"></i> Módulo de Sitios
                 </legend>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div>
-                        <label class="block text-sm font-medium">Unidad Administrativa</label>
-                        <input type="text" name="unidad_administrativa" class="mt-1 w-full border rounded-lg px-3 py-2">
+                        <label class="block text-sm font-medium">Sitio</label>
+                        <input type="text" name="sitio" class="mt-1 w-full border rounded-lg px-3 py-2">
                     </div>
                     <div>
-                        <label class="block text-sm font-medium">Clave de Identificación</label>
-                        <input type="text" name="clave_identificacion" class="mt-1 w-full border rounded-lg px-3 py-2">
+                        <label class="block text-sm font-medium">Unidad Administrativa</label>
+                        <input type="text" name="unidad_administrativa" class="mt-1 w-full border rounded-lg px-3 py-2">
                     </div>
                     <div>
                         <label class="block text-sm font-medium">Dirección</label>
@@ -45,46 +42,8 @@
                         <input type="text" name="municipio" class="mt-1 w-full border rounded-lg px-3 py-2">
                     </div>
                     <div>
-                        <label class="block text-sm font-medium">Latitud</label>
-                        <input type="number" step="any" name="latitud" class="mt-1 w-full border rounded-lg px-3 py-2">
-                    </div>
-                    <div>
-                        <label class="block text-sm font-medium">Longitud</label>
-                        <input type="number" step="any" name="longitud" class="mt-1 w-full border rounded-lg px-3 py-2">
-                    </div>
-                </div>
-                <div class="text-center mt-4">
-                    <button type="submit" class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700">Enviar</button>
-                </div>
-            </fieldset>
-        </form>
-
-        <!-- Módulo de LAN -->
-        <form method="POST" action="https://script.google.com/macros/s/AKfycbxKF8PmyQVWMNb3KpowDhV1G_lfrWWZ7vGGQqmNrjLYcr5xRc2vm1hVxb0fVtT6rg-vUQ/exec?sheet=Datos_Red_Lan" onsubmit="mostrarMensaje()">
-            <fieldset class="border border-gray-300 rounded-xl p-4 mb-6">
-                <legend class="font-semibold text-lg mb-2 flex items-center text-gray-700">
-                    <i class="fas fa-network-wired mr-2"></i> Módulo de Red LAN
-                </legend>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <div>
-                        <label class="block text-sm font-medium">Sitio</label>
-                        <input type="text" name="sitio_lan" class="mt-1 w-full border rounded-lg px-3 py-2">
-                    </div>
-                    <div>
-                        <label class="block text-sm font-medium">Marca del Switch</label>
-                        <input type="text" name="marca_switch" class="mt-1 w-full border rounded-lg px-3 py-2">
-                    </div>
-                    <div>
-                        <label class="block text-sm font-medium">Modelo</label>
-                        <input type="text" name="modelo_switch" class="mt-1 w-full border rounded-lg px-3 py-2">
-                    </div>
-                    <div>
-                        <label class="block text-sm font-medium">No. Serie</label>
-                        <input type="text" name="serie_switch" class="mt-1 w-full border rounded-lg px-3 py-2">
-                    </div>
-                    <div>
-                        <label class="block text-sm font-medium">No. de Inventario</label>
-                        <input type="text" name="inventario_switch" class="mt-1 w-full border rounded-lg px-3 py-2">
+                        <label class="block text-sm font-medium">Clave de Identificación</label>
+                        <input type="text" name="clave_identificacion" class="mt-1 w-full border rounded-lg px-3 py-2">
                     </div>
                 </div>
                 <div class="text-center mt-4">
@@ -97,24 +56,53 @@
         <form method="POST" action="https://script.google.com/macros/s/AKfycbxKF8PmyQVWMNb3KpowDhV1G_lfrWWZ7vGGQqmNrjLYcr5xRc2vm1hVxb0fVtT6rg-vUQ/exec?sheet=Datos_Internet" onsubmit="mostrarMensaje()">
             <fieldset class="border border-gray-300 rounded-xl p-4 mb-6">
                 <legend class="font-semibold text-lg mb-2 flex items-center text-gray-700">
-                    <i class="fas fa-wifi mr-2"></i> Módulo de Internet
+                    <i class="fas fa-network-wired mr-2"></i> Módulo de Internet
                 </legend>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div>
-                        <label class="block text-sm font-medium">Proveedor</label>
-                        <input type="text" name="proveedor_internet" class="mt-1 w-full border rounded-lg px-3 py-2">
+                        <label class="block text-sm font-medium">Número de Referencia</label>
+                        <input type="text" name="numero_referencia" class="mt-1 w-full border rounded-lg px-3 py-2">
                     </div>
                     <div>
-                        <label class="block text-sm font-medium">Velocidad Contratada (Mbps)</label>
-                        <input type="number" step="any" name="velocidad_internet" class="mt-1 w-full border rounded-lg px-3 py-2">
+                        <label class="block text-sm font-medium">Tipo de Enlace</label>
+                        <select name="tipo_enlace" class="mt-1 w-full border rounded-lg px-3 py-2">
+                            <option value="dedicado">Dedicado</option>
+                            <option value="asincrono">Asíncrono</option>
+                            <option value="sincrono">Síncrono</option>
+                            <option value="adsl">ADSL</option>
+                        </select>
                     </div>
                     <div>
-                        <label class="block text-sm font-medium">Fecha de Contratación</label>
-                        <input type="date" name="fecha_contratacion_internet" class="mt-1 w-full border rounded-lg px-3 py-2">
+                        <label class="block text-sm font-medium">Ancho de Banda (Mbps)</label>
+                        <select name="ancho_banda" class="mt-1 w-full border rounded-lg px-3 py-2">
+                            <option value="10">10 Mbps</option>
+                            <option value="20">20 Mbps</option>
+                            <option value="50">50 Mbps</option>
+                            <option value="100">100 Mbps</option>
+                        </select>
                     </div>
                     <div>
-                        <label class="block text-sm font-medium">Fecha de Vencimiento</label>
-                        <input type="date" name="fecha_vencimiento_internet" class="mt-1 w-full border rounded-lg px-3 py-2">
+                        <label class="block text-sm font-medium">Medio de Transmisión</label>
+                        <select name="medio_transmision" class="mt-1 w-full border rounded-lg px-3 py-2">
+                            <option value="fibra_optica">Fibra Óptica</option>
+                            <option value="cobre">Cobre</option>
+                            <option value="microonda">Microonda</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium">IP Pública (¿sí o no?)</label>
+                        <select name="ip_publica" class="mt-1 w-full border rounded-lg px-3 py-2">
+                            <option value="si">Sí</option>
+                            <option value="no">No</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium">Dirección IP Pública</label>
+                        <input type="text" name="direccion_ip_publica" class="mt-1 w-full border rounded-lg px-3 py-2">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium">Dirección IP LAN</label>
+                        <input type="text" name="direccion_ip_lan" class="mt-1 w-full border rounded-lg px-3 py-2">
                     </div>
                 </div>
                 <div class="text-center mt-4">
@@ -124,7 +112,7 @@
         </form>
 
         <!-- Módulo de Seguridad Perimetral -->
-        <form method="POST" action="https://script.google.com/macros/s/AKfycbxKF8PmyQVWMNb3KpowDhV1G_lfrWWZ7vGGQqmNrjLYcr5xRc2vm1hVxb0fVtT6rg-vUQ/exec?sheet=Datos_Seguridad_Perimetral" onsubmit="mostrarMensaje()">
+        <form method="POST" action="https://script.google.com/macros/s/AKfycbxKF8PmyQVWMNb3KpowDhV1G_lfrWWZ7vGGQqmNrjLYcr5xRc2vm1hVxb0fVtT6rg-vUQ/exec?sheet=Datos_Seguridad" onsubmit="mostrarMensaje()">
             <fieldset class="border border-gray-300 rounded-xl p-4 mb-6">
                 <legend class="font-semibold text-lg mb-2 flex items-center text-gray-700">
                     <i class="fas fa-shield-alt mr-2"></i> Módulo de Seguridad Perimetral
@@ -132,19 +120,31 @@
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div>
                         <label class="block text-sm font-medium">Sitio</label>
-                        <input type="text" name="sitio_seguridad_perimetral" class="mt-1 w-full border rounded-lg px-3 py-2">
+                        <input type="text" name="sitio_seguridad" class="mt-1 w-full border rounded-lg px-3 py-2">
                     </div>
                     <div>
-                        <label class="block text-sm font-medium">Marca del Dispositivo</label>
-                        <input type="text" name="marca_dispositivo" class="mt-1 w-full border rounded-lg px-3 py-2">
+                        <label class="block text-sm font-medium">Marca</label>
+                        <input type="text" name="marca" class="mt-1 w-full border rounded-lg px-3 py-2">
                     </div>
                     <div>
                         <label class="block text-sm font-medium">Modelo</label>
-                        <input type="text" name="modelo_dispositivo" class="mt-1 w-full border rounded-lg px-3 py-2">
+                        <input type="text" name="modelo" class="mt-1 w-full border rounded-lg px-3 py-2">
                     </div>
                     <div>
-                        <label class="block text-sm font-medium">No. de Serie</label>
-                        <input type="text" name="serie_dispositivo" class="mt-1 w-full border rounded-lg px-3 py-2">
+                        <label class="block text-sm font-medium">Número de Serie</label>
+                        <input type="text" name="numero_serie" class="mt-1 w-full border rounded-lg px-3 py-2">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium">Número de Inventario</label>
+                        <input type="text" name="numero_inventario" class="mt-1 w-full border rounded-lg px-3 py-2">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium">Número de Licencia</label>
+                        <input type="text" name="numero_licencia" class="mt-1 w-full border rounded-lg px-3 py-2">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium">Fecha de Vencimiento</label>
+                        <input type="date" name="fecha_vencimiento" class="mt-1 w-full border rounded-lg px-3 py-2">
                     </div>
                 </div>
                 <div class="text-center mt-4">
@@ -153,32 +153,28 @@
             </fieldset>
         </form>
 
-        <!-- Módulo de Teléfonos Rojos -->
-        <form method="POST" action="https://script.google.com/macros/s/AKfycbxKF8PmyQVWMNb3KpowDhV1G_lfrWWZ7vGGQqmNrjLYcr5xRc2vm1hVxb0fVtT6rg-vUQ/exec?sheet=Datos_Telefonos_Rojos" onsubmit="mostrarMensaje()">
+        <!-- Módulo de Teléfono Rojo -->
+        <form method="POST" action="https://script.google.com/macros/s/AKfycbxKF8PmyQVWMNb3KpowDhV1G_lfrWWZ7vGGQqmNrjLYcr5xRc2vm1hVxb0fVtT6rg-vUQ/exec?sheet=Datos_Telefono" onsubmit="mostrarMensaje()">
             <fieldset class="border border-gray-300 rounded-xl p-4 mb-6">
                 <legend class="font-semibold text-lg mb-2 flex items-center text-gray-700">
-                    <i class="fas fa-phone-alt mr-2"></i> Módulo de Teléfonos Rojos
+                    <i class="fas fa-phone-alt mr-2"></i> Módulo de Teléfono Rojo
                 </legend>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div>
                         <label class="block text-sm font-medium">Sitio</label>
-                        <input type="text" name="sitio_telefono_rojo" class="mt-1 w-full border rounded-lg px-3 py-2">
+                        <input type="text" name="sitio_telefono" class
                     </div>
-                    <div>
-                        <label class="block text-sm font-medium">Número de IP</label>
-                        <input type="text" name="numero_ip" class="mt-1 w-full border rounded-lg px-3 py-2">
-                    </div>
-                    <div>
-                        <label class="block text-sm font-medium">Responsable</label>
-                        <input type="text" name="responsable_telefono_rojo" class="mt-1 w-full border rounded-lg px-3 py-2">
-                    </div>
+                    <div>   
+                        <label class="block text-sm font-medium">Número Extension</label>
+                        <input type="text" name="Extension_telefono" class
+                  </div>
+                   <div>
+                        <label class="block text-sm font-medium">IP</label>
+                        <input type="text" name="direccion_ip" class
+                  </div>
                 </div>
                 <div class="text-center mt-4">
                     <button type="submit" class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700">Enviar</button>
                 </div>
             </fieldset>
         </form>
-    </div>
-</body>
-
-</html>
